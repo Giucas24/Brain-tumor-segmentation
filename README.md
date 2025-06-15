@@ -15,13 +15,24 @@ The segmentation process is divided in 4 parts:
       </p>
       
   2. K-means Clustering: segmentation of the FLAIR image with k = 3.
+  3. Thresholding: extraction of the cluster with the brightest centroid (good extraction thanks to the high contrast provided by the FLAIR sequence).
+
       <p align="center">
         <img src="example%20images/kmeans%20new.png" width="400"/>
       </p>
-    
-  4. Thresholding: extraction of the cluster with the brightest centroid (good extraction thanks to the high contrast provided by the FLAIR sequence).
-  5. Morphological Operations: sequence of opening and closing operations (those MO may vary based on the size of the tumors). 3 different Structuring Elements have been tested.
-    4.1 The result of the MO of each of the 3 SE have been further cleaned using the bwconncomp function in order to count the pixel inside each connected component and retain only the one with more than 200 px (this value may also be refined as well as the sequence of MO).
-  6. Test: Jaccard index, Dice Coefficient and F1-score computed to understand how the segmented region is similar to the ground truth provided in the dataset.
 
+  4. Morphological Operations: sequence of opening and closing operations (those MO may vary based on the size of the tumors). 3 different Structuring Elements have been tested.
+      <p align="center">
+        <img src="example%20images/results%20new.png" width="400"/>
+      </p>
+    
+  4.1 The result of the MO of each of the 3 SE have been further cleaned using the bwconncomp function in order to count the pixel inside each connected component and retain only the one with more than 200 px           (this value may also be refined as well as the sequence of MO).
+      <p align="center">
+        <img src="example%20images/bwconncomp%20results%20new.png" width="400"/>
+      </p>
+  
+  5. Test: Jaccard index, Dice Coefficient and F1-score computed to understand how the segmented region is similar to the ground truth provided in the dataset.
+      <p align="center">
+        <img src="example%20images/boxplot%20new.png" width="400"/>
+      </p>
 
