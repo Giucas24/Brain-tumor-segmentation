@@ -8,7 +8,7 @@ In the datased used there were 4 sequences of MRI acquired: FLAIR, T1, T1-gd and
   <img src="example%20images/4%20sequenze%20mri%20new.png" width="400"/>
 </p>
 
-The segmentation process is divided in 4 parts:
+The segmentation process is divided in 5 parts:
   1. Preprocessing: application of a Median Filter with a window size of 5.
       <p align="center">
         <img src="example%20images/median%20filter%20img%20new.png" width="400"/>
