@@ -4,6 +4,10 @@ The specific work is my personal implementation of an already existing solution 
 This work has been develeped and tested on a BRATS dataset which contains NIfTI files representing the 3D volume of acquisitions.
 In the datased used there were 4 sequences of MRI acquired: FLAIR, T1, T1-gd and T2. This implementation is thought of being used just with FLAIR sequence. Other sequences may not perform correctly.
 
+<p align="center">
+  <img src="example%20images/4%20sequenze%20mri%20new.png" width="400"/>
+</p>
+
 ![Screenshot](example%20images/4%20sequenze%20mri%20new.png)
 
 The segmentation process is divided in 4 parts:
