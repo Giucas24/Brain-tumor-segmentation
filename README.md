@@ -8,14 +8,17 @@ In the datased used there were 4 sequences of MRI acquired: FLAIR, T1, T1-gd and
   <img src="example%20images/4%20sequenze%20mri%20new.png" width="400"/>
 </p>
 
-![Screenshot](example%20images/4%20sequenze%20mri%20new.png)
-
 The segmentation process is divided in 4 parts:
   1. Preprocessing: application of a Median Filter with a window size of 5.
-
-     ![Screenshot](example%20images/median%20filter%20img%20new.png)
-
-  3. K-means Clustering: segmentation of the FLAIR image with k = 3.
+      <p align="center">
+        <img src="example%20images/median%20filter%20img%20new.png" width="400"/>
+      </p>
+      
+  2. K-means Clustering: segmentation of the FLAIR image with k = 3.
+      <p align="center">
+        <img src="example%20images/kmeans%20new.png" width="400"/>
+      </p>
+    
   4. Thresholding: extraction of the cluster with the brightest centroid (good extraction thanks to the high contrast provided by the FLAIR sequence).
   5. Morphological Operations: sequence of opening and closing operations (those MO may vary based on the size of the tumors). 3 different Structuring Elements have been tested.
     4.1 The result of the MO of each of the 3 SE have been further cleaned using the bwconncomp function in order to count the pixel inside each connected component and retain only the one with more than 200 px (this value may also be refined as well as the sequence of MO).
