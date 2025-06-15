@@ -4,12 +4,17 @@ The specific work is my personal implementation of an already existing solution 
 This work has been develeped and tested on a BRATS dataset which contains NIfTI files representing the 3D volume of acquisitions.
 In the datased used there were 4 sequences of MRI acquired: FLAIR, T1, T1-gd and T2. This implementation is thought of being used just with FLAIR sequence. Other sequences may not perform correctly.
 
+![Screenshot](example%20images/4%20sequenze%20mri%20new.png)
+
 The segmentation process is divided in 4 parts:
   1. Preprocessing: application of a Median Filter with a window size of 5.
-  2. K-means Clustering: segmentation of the FLAIR image with k = 3.
-  3. Thresholding: extraction of the cluster with the brightest centroid (good extraction thanks to the high contrast provided by the FLAIR sequence).
-  4. Morphological Operations: sequence of opening and closing operations (those MO may vary based on the size of the tumors). 3 different Structuring Elements have been tested.
-    4.1 The result of the MO of each of the 3 SE have been further cleaned using the bwconncomp function in order to count the pixel inside each connected component and retain only the one with more than 200 px (this value may also be refined as well as the sequence of MO).
-  5. Test: Jaccard index, Dice Coefficient and F1-score computed to understand how the segmented region is similar to the ground truth provided in the dataset.
 
-![Screenshot](example%20images/4%20sequenze%20mri%20new.png)
+     ![Screenshot](example%20images/median%20filter%20img%20new.png)
+
+  3. K-means Clustering: segmentation of the FLAIR image with k = 3.
+  4. Thresholding: extraction of the cluster with the brightest centroid (good extraction thanks to the high contrast provided by the FLAIR sequence).
+  5. Morphological Operations: sequence of opening and closing operations (those MO may vary based on the size of the tumors). 3 different Structuring Elements have been tested.
+    4.1 The result of the MO of each of the 3 SE have been further cleaned using the bwconncomp function in order to count the pixel inside each connected component and retain only the one with more than 200 px (this value may also be refined as well as the sequence of MO).
+  6. Test: Jaccard index, Dice Coefficient and F1-score computed to understand how the segmented region is similar to the ground truth provided in the dataset.
+
+
