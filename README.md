@@ -11,3 +11,5 @@ The segmentation process is divided in 4 parts:
   4. Morphological Operations: sequence of opening and closing operations (those MO may vary based on the size of the tumors). 3 different Structuring Elements have been tested.
     4.1 The result of the MO of each of the 3 SE have been further cleaned using the bwconncomp function in order to count the pixel inside each connected component and retain only the one with more than 200 px (this value may also be refined as well as the sequence of MO).
   5. Test: Jaccard index, Dice Coefficient and F1-score computed to understand how the segmented region is similar to the ground truth provided in the dataset.
+
+![Screenshot](example images/4 sequenze mri new.png)
