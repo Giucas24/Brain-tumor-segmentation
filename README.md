@@ -28,7 +28,7 @@ The segmentation process is divided in 5 parts:
     
   4.1 The result of the MO of each of the 3 SE have been further cleaned using the bwconncomp function in order to count the pixel inside each connected component and retain only the one with more than 200 px           (this value may also be refined as well as the sequence of MO).
       <p align="center">
-        <img src="example%20images/bwconncomp%20results%20new.png" width="400"/>
+        <img src="example%20images/bwconncomp%20results.png" width="400"/>
       </p>
   
   5. Test: Jaccard index, Dice Coefficient and F1-score computed to understand how the segmented region is similar to the ground truth provided in the dataset.
